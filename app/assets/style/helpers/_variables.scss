@@ -4,6 +4,49 @@
 // consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
 
 // Color system
+//嘗試新增圖片寫死高度的變數(未啟用)
+// $height-48: 3rem !default;
+// $height-94: 5.875rem !default;
+// $height-150: 9.375rem !default;
+// $height-165: 10.3125rem !default;
+// $height-196: 12.25rem !default;
+// $height-210: 13.125rem !default;
+// $height-216: 13.5rem !default;
+// $height-218: 13.625rem !default;
+// $height-252: 15.75rem !default;
+// $height-266: 16.625rem !default;
+// $height-323: 20.1875rem !default;
+// $height-341: 21.3125rem !default;
+// $height-350: 21.875rem !default;
+// $height-360: 22.5rem !default;
+// $height-418: 26.125rem !default;
+// $height-420: 26.25rem !default;
+// $height-444: 27.75rem !default;
+// $height-628: 39.25rem !default;
+//嘗試新增圖片寫死高度的變數結束
+
+//嘗試新增圖片寫死高度的map(未啟用)
+// $imgSizes: (
+//   "48": $height-48,
+//   "94": $height-94,
+//   "150": $height-150,
+//   "165": $height-165,
+//   "196": $height-196,
+//   "210": $height-210,
+//   "216": $height-216,
+//   "218": $height-218,
+//   "252": $height-252,
+//   "266": $height-266,
+//   "323": $height-323,
+//   "341": $height-341,
+//   "350": $height-350,
+//   "360": $height-360,
+//   "418": $height-418,
+//   "420": $height-420,
+//   "444": $height-444,
+//   "628": $height-628,
+// ) !default;
+//嘗試新增圖片寫死高度的map結束
 
 // scss-docs-start gray-color-variables
 $white:    #fff !default;
@@ -62,22 +105,28 @@ $colors: (
   "cyan":       $cyan,
   "white":      $white,
   "gray":       $gray-600,
-  "gray-dark":  $gray-800
+  "gray-dark":  $gray-800,
+  "$dark_2":    #707070,
+  "$light_2":   #F5F0E7,
 ) !default;
 // scss-docs-end colors-map
 
 // scss-docs-start theme-color-variables
-$primary:       #00cc99; // $blue !default;
-$secondary:     $gray-600 !default;
+/*------更新、新增顏色存放區-----*/
+$primary:     #907A7B!default;  //$blue
+$secondary:   #C0A4A5 !default;  //$gray-600
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-900 !default;
+$dark_2:      #707070 !default;
+$light_2:     #F5F0E7 !default;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
+/*------更新、新增顏色存放區-----*/
 $theme-colors: (
   "primary":    $primary,
   "secondary":  $secondary,
@@ -86,7 +135,9 @@ $theme-colors: (
   "warning":    $warning,
   "danger":     $danger,
   "light":      $light,
-  "dark":       $dark
+  "dark":       $dark,
+  "dark_2":     #707070,
+  "light_2":    #F5F0E7,
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -250,11 +301,28 @@ $gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
 $spacer: 1rem !default;
 $spacers: (
   0: 0,
-  1: $spacer * .25,
-  2: $spacer * .5,
-  3: $spacer,
-  4: $spacer * 1.5,
-  5: $spacer * 3,
+  1: $spacer * .25,            //4,old
+  2: $spacer * .5,             //8,old
+  3: $spacer * .75,            //12
+  4: $spacer ,                 //16
+  5: $spacer * 1.25,           //20
+  6: $spacer * 1.5,            //24
+  7: $spacer * 1.75,           //28
+  7-half: $spacer * 1.875,     //30
+  8: $spacer * 2,              //32
+  9: $spacer * 2.25,           //36
+ 10: $spacer * 2.5,            //40
+ 11: $spacer * 2.75,           //44
+ 12: $spacer * 3,              //48
+ 13: $spacer * 3.25,           //52
+ 14: $spacer * 3.5,            //56
+ 16: $spacer * 4,              //64
+ 18: $spacer * 4.5,            //72
+ 20: $spacer * 5,              //80
+ 22: $spacer * 5.5,            //88
+ 26: $spacer * 6.5,            //104
+ 28: $spacer * 7,              //112
+ negative-6: $spacer * -1.5,   //-24
 ) !default;
 
 $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;
@@ -267,6 +335,8 @@ $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) 
 // scss-docs-start position-map
 $position-values: (
   0: 0,
+  20: 20%, //new
+  25: 25%, //new
   50: 50%,
   100: 100%
 ) !default;
@@ -284,9 +354,9 @@ $body-text-align:           null !default;
 // Links
 //
 // Style anchor elements.
-
+/*--------第一、二個要改---------*/
 $link-color:                              $primary !default;
-$link-decoration:                         underline !default;
+$link-decoration:                         none !default; //underline
 $link-shade-percentage:                   20% !default;
 $link-hover-color:                        shift-color($link-color, $link-shade-percentage) !default;
 $link-hover-decoration:                   null !default;
@@ -341,9 +411,9 @@ $container-max-widths: (
 // Grid columns
 //
 // Set the number of columns and specify the width of the gutters.
-
+/*--------第二個要改為30px(1.875rem)---------*/
 $grid-columns:                12 !default;
-$grid-gutter-width:           1.5rem !default;
+$grid-gutter-width:           1.875rem !default;
 $grid-row-columns:            6 !default;
 
 $gutters: $spacers !default;
@@ -371,10 +441,12 @@ $border-color:                $gray-300 !default;
 // scss-docs-end border-variables
 
 // scss-docs-start border-radius-variables
+/*--------最後一個將圓角新增一個16px(1rem)的設定 ---------*/
 $border-radius:               .25rem !default;
 $border-radius-sm:            .2rem !default;
 $border-radius-lg:            .3rem !default;
 $border-radius-pill:          50rem !default;
+$border-radius-16:            1rem  !default; //new
 // scss-docs-end border-radius-variables
 
 // scss-docs-start box-shadow-variables
@@ -401,11 +473,25 @@ $transition-collapse:         height .35s ease !default;
 
 // stylelint-disable function-disallowed-list
 // scss-docs-start aspect-ratios
+/*---------------- 關於免設死高、寬所增加的設定-----------------*/
 $aspect-ratios: (
   "1x1": 100%,
+  "3x4": calc(4 / 3 * 100%),   //new
   "4x3": calc(3 / 4 * 100%),
+  "5x4": calc(4 / 5 * 100%),  //new
+  "5x6": calc(6 / 5 * 100%),  //new 
+  "5x7": calc(7 / 5 * 100%),  //new
+  "7x4": calc(4 / 7 * 100%),  //new
+  "7x5": calc(5 / 7 * 100%),  //new
+  "7x9": calc(9 / 7 * 100%),  //new
+  "11x14": calc(14 / 11 * 100%),  //new
+  "12x19": calc(19 / 12 * 100%),  //new
+  "13x10": calc(10 / 13 * 100%),  //new
   "16x9": calc(9 / 16 * 100%),
-  "21x9": calc(9 / 21 * 100%)
+  "16x21": calc(21 / 16 * 100%),  //new
+  "21x9": calc(9 / 21 * 100%),
+  "25x12": calc(12 / 25 * 100%),   //new
+  "35x22": calc(22 / 35 * 100%),   //new
 ) !default;
 // scss-docs-end aspect-ratios
 // stylelint-enable function-disallowed-list
@@ -432,8 +518,9 @@ $font-size-lg:                $font-size-base * 1.25 !default;
 $font-weight-lighter:         lighter !default;
 $font-weight-light:           300 !default;
 $font-weight-normal:          400 !default;
+$font-weight-medium:          500 !default;  //new
 $font-weight-bold:            700 !default;
-$font-weight-bolder:          bolder !default;
+$font-weight-bolder:          900 !default;  //new
 
 $font-weight-base:            $font-weight-normal !default;
 
@@ -441,12 +528,13 @@ $line-height-base:            1.5 !default;
 $line-height-sm:              1.25 !default;
 $line-height-lg:              2 !default;
 
-$h1-font-size:                $font-size-base * 2.5 !default;
-$h2-font-size:                $font-size-base * 2 !default;
-$h3-font-size:                $font-size-base * 1.75 !default;
-$h4-font-size:                $font-size-base * 1.5 !default;
-$h5-font-size:                $font-size-base * 1.25 !default;
+$h1-font-size:                $font-size-base * 2.25 !default;  //36  原本是 2.5
+$h2-font-size:                $font-size-base * 2 !default;     //32 
+$h3-font-size:                $font-size-base * 1.75 !default;  //28 
+$h4-font-size:                $font-size-base * 1.5 !default;   //24 
+$h5-font-size:                $font-size-base * 1.25 !default;  //20 
 $h6-font-size:                $font-size-base !default;
+$h7-font-size:                $font-size-base * 0.875!default;  //14 new
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes
@@ -456,9 +544,21 @@ $font-sizes: (
   3: $h3-font-size,
   4: $h4-font-size,
   5: $h5-font-size,
-  6: $h6-font-size
+  6: $h6-font-size,
+  7: $h7-font-size,
 ) !default;
 // scss-docs-end font-sizes
+/*---------------- 新增自訂文字大小 fz --------------*/
+$fz-3-half:     .875rem !default;   //14px
+$fz-4:          1rem !default;      //16px
+$fz-5:          1.25rem !default;   //20px
+$fz-6:          1.5rem !default;    //24px
+$fz-7:          1.75rem !default;   //28px
+$fz-8:          2rem !default;      //32px
+$fz-9:          2.25rem !default;   //36px
+$fz-12:         3rem !default;     //48px
+
+// 結束新增自訂fz
 
 // scss-docs-start headings-variables
 $headings-margin-bottom:      $spacer * .5 !default;
@@ -1081,11 +1181,14 @@ $pagination-border-radius-lg:       $border-radius-lg !default;
 // Cards
 
 // scss-docs-start card-variables
-$card-spacer-y:                     $spacer !default;
-$card-spacer-x:                     $spacer !default;
-$card-title-spacer-y:               $spacer * .5 !default;
+/*--------第一、二個要改為24px(1.5rem)但，拿掉時不好拿，以後不一定要設---------*/
+/*--------第五個將圓角改為16px(1rem)---------*/
+/*--------倒數第二個要改24px(1.5rem)，但，拿掉時不好拿，以後不一定要設---------*/
+$card-spacer-y:                     1.5rem !default;              //$spacer
+$card-spacer-x:                     1.5rem !default;              //$spacer
+$card-title-spacer-y:               $spacer * .25 !default;       //$spacer * .5
 $card-border-width:                 $border-width !default;
-$card-border-radius:                $border-radius !default;
+$card-border-radius:                1rem!default;                 //$border-radius
 $card-border-color:                 rgba($black, .125) !default;
 $card-inner-border-radius:          subtract($card-border-radius, $card-border-width) !default;
 $card-cap-padding-y:                $card-spacer-y * .5 !default;
@@ -1095,7 +1198,7 @@ $card-cap-color:                    null !default;
 $card-height:                       null !default;
 $card-color:                        null !default;
 $card-bg:                           $white !default;
-$card-img-overlay-padding:          $spacer !default;
+$card-img-overlay-padding:          $spacer * 1.5!default;         //24px 原本沒有 * 1.5
 $card-group-margin:                 $grid-gutter-width * .5 !default;
 // scss-docs-end card-variables
 
@@ -1116,11 +1219,11 @@ $accordion-body-padding-x:                $accordion-padding-x !default;
 
 $accordion-button-padding-y:              $accordion-padding-y !default;
 $accordion-button-padding-x:              $accordion-padding-x !default;
-$accordion-button-color:                  $accordion-color !default;
-$accordion-button-bg:                     $accordion-bg !default;
+$accordion-button-color:                  $light !default;          //$accordion-color *修改手風琴icon顏色的地方*
+$accordion-button-bg:                     $light_2 !default;        //$accordion-bg *修改手風琴icon顏色的地方*
 $accordion-transition:                    $btn-transition, border-radius .15s ease !default;
-$accordion-button-active-bg:              tint-color($component-active-bg, 90%) !default;
-$accordion-button-active-color:           shade-color($primary, 10%) !default;
+$accordion-button-active-bg:              $primary !default;        //tint-color($component-active-bg, 90%) *修改手風琴icon顏色的地方*
+$accordion-button-active-color:           $light !default;          //shade-color($primary, 10%)   *修改手風琴icon顏色的地方*
 
 $accordion-button-focus-border-color:     $input-focus-border-color !default;
 $accordion-button-focus-box-shadow:       $btn-focus-box-shadow !default;
