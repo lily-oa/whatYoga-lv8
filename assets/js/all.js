@@ -4280,9 +4280,9 @@ $('.js-experience-cards').on('click', function () {
 
 $('.js-scheme-card').on('click', function () {
   var courseScheme = $(this).attr('data-name');
-  $('.js-scheme-card').removeClass('border-light').addClass('border-transparent');
+  $('.js-scheme-card').removeClass('border-white').addClass('border-transparent');
   $('.js-scheme-card').find('.material-icons-outlined').addClass('opacity-0.3');
-  $(this).removeClass('border-transparent').addClass('border-light');
+  $(this).removeClass('border-transparent').addClass('border-white');
   $(this).find('.material-icons-outlined').removeClass('opacity-0.3');
   $('.js-course-scheme').text(courseScheme);
 });
