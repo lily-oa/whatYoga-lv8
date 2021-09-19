@@ -1,3 +1,3 @@
 whatYoga-lv8 瑜珈電商
 
-pages: https://lv8-whatyoga.red.cash/
+pages: https://whatyoga_lv8.red.cash/
