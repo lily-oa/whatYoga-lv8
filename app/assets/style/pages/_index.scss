@@ -7,7 +7,7 @@
   clip-path: inset(0); //讓超出的範圍都被剪裁掉
 }
 
-
+//用偽元素的方式做出背景固定不變的效果
 .banner_index:before {
   content: '';
   position: fixed;
