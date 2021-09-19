@@ -11660,6 +11660,18 @@ fieldset:disabled .btn {
   text-shadow: none !important;
 }
 
+.z-index-1 {
+  z-index: 1 !important;
+}
+
+.z-index-3 {
+  z-index: 3 !important;
+}
+
+.z-index-999 {
+  z-index: 999 !important;
+}
+
 @media (min-width: 576px) {
   .float-sm-start {
     float: left !important;
