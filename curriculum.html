@@ -48,7 +48,6 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
   <!--日期外掛-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/css/datepicker.min.css"> 
-  
   <!--內部-->
   <link rel="stylesheet" href="./assets/style/all.css">
 </head>
@@ -266,9 +265,24 @@
       <div class="col-md-7">
         <h4 class="text-white text-md-start fz-md-7 mb-2">現在訂閱，獲得課程優惠碼！</h4>
         <div class="input-group mb-3 interButton">
-          <input type="text" class="form-control text-secondary" placeholder="輸入您的電子信箱" aria-label="輸入您的電子信箱"
-            aria-describedby="訂閱信箱">
-          <button class="btn btn-secondary text-white" type="button" id="interButton">訂閱</button>
+          <input 
+            type="email" 
+            name="Email" 
+            id="subscriptionEmail"
+            class="form-control text-secondary js-subscription-email" 
+            placeholder="輸入您的電子信箱" 
+            aria-label="輸入您的電子信箱"
+            aria-describedby="訂閱信箱"
+          >
+          <button class="btn btn-secondary text-white js-subscription-btn border-0" type="button">
+            訂閱
+          </button>
+        </div>
+        <div class="row">
+          <div class="col">
+            <p class="js-subscription-email-msg validate-msg validate-msg-white text-danger text-start fz-4">
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -277,24 +291,44 @@
         <h4 class="text-white fz-lg-5">現在訂閱，獲得課程優惠碼！</h4>
       </div>
       <div class="col-lg-4">
-        <div class="input-group interButton">
-          <input type="text" class="form-control text-secondary" placeholder="輸入您的電子信箱" aria-label="輸入您的電子信箱"
-            aria-describedby="訂閱信箱">
-          <button class="btn btn-secondary text-white" type="button" id="interButton">訂閱</button>
+        <div class="input-group">
+          <input 
+            type="email" 
+            name="Email" 
+            id="subscriptionEmail"
+            class="form-control text-secondary js-subscription-email" 
+            placeholder="輸入您的電子信箱" 
+            aria-label="輸入您的電子信箱"
+            aria-describedby="訂閱信箱"
+          >
+          <button class="btn btn-secondary text-white js-subscription-btn border-0" type="button" disabled>
+            訂閱
+          </button>
+        </div>
+        <div class="row">
+          <div class="col">
+            <p class="js-subscription-email-msg validate-msg validate-msg-white text-danger text-start fz-4">
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
   <div class="border border-white my-6 my-md-8"></div>
-  
+
   <div class="container">
     <div class="d-flex justify-content-between align-items-flex-start">
-      <a href="./index.html"><h4 class="text-white fw-bolder useHover_2 mb-md-3">DOYOGA</h4></a>
+      <a href="./index.html">
+        <h4 class="text-white fw-bolder useHover_2 mb-md-3">DOYOGA</h4>
+      </a>
       <div class="d-flex">
-        <li class="mb-2"><a href="https://zh-tw.facebook.com/facebook/" class="useHover_2 text-white"><i class="fab fa-facebook fIcon"></i></a></li>
-        <li class="mb-2"><a href="https://business.instagram.com/getting-started?locale=zh_TW" class="useHover_2 text-white"><i class="fab fa-line fIcon"></i></a></li>
-        <li><a href="https://linecorp.com/zh-hant/" class="useHover_2 text-white"><i class="fab fa-instagram fIcon"></i></a></li>
+        <li class="mb-2"><a href="https://zh-tw.facebook.com/facebook/" class="useHover_2 text-white"><i
+              class="fab fa-facebook fIcon"></i></a></li>
+        <li class="mb-2"><a href="https://business.instagram.com/getting-started?locale=zh_TW"
+            class="useHover_2 text-white"><i class="fab fa-line fIcon"></i></a></li>
+        <li><a href="https://linecorp.com/zh-hant/" class="useHover_2 text-white"><i
+              class="fab fa-instagram fIcon"></i></a></li>
       </div>
     </div>
     <div class="row">
@@ -321,9 +355,10 @@
   <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/js/datepicker-full.min.js"></script>
   <!--swiper @7 js-->
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-  <!--jquery google cdn-->
+  <!--jquery chrome-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="./assets/js/vendors.js"></script>
   <script src="./assets/js/all.js"></script>
 </body>
+
 </html>
