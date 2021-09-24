@@ -47,21 +47,30 @@
   <!--swiper @7 css-->
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
   <!--日期外掛-->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/css/datepicker.min.css"> 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/css/datepicker.min.css">
+  <!--動畫-->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <!--內部-->
   <link rel="stylesheet" href="./assets/style/all.css">
 </head>
 
 <body>
-    
+
   <%- include('./components/navbar.ejs') %>
-  
+
   <%- include('./components/icon.ejs') %>
 
   <%- contents %>
 
   <%- include('./components/footer.ejs') %>
 
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      offset: 100,
+      once: true,
+    });
+  </script>
   <!--日期外掛-->
   <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/js/datepicker-full.min.js"></script>
   <!--swiper @7 js-->
