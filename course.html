@@ -47,13 +47,15 @@
   <!--swiper @7 css-->
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
   <!--日期外掛-->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/css/datepicker.min.css"> 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/css/datepicker.min.css">
+  <!--動畫-->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <!--內部-->
   <link rel="stylesheet" href="./assets/style/all.css">
 </head>
 
 <body>
-    
+
   <!--navbar-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light_2">
   <div class="container">
@@ -89,7 +91,7 @@
     </div>
   </div>
 </nav>
-  
+
   <!--滾動icon-->
 <ul class="run_icon text-primary position-fixed top-50 end-0 text-center d-none d-lg-block">
   <li class="mb-2"><a href="https://zh-tw.facebook.com/facebook/" class="useHover_2 text-secondary"><i class="fab fa-facebook fa-3x"></i></a></li>
@@ -101,23 +103,64 @@
 <!--課程介紹-->
 <div class="container">
   <section class="pt-12 pt-md-16 pb-12 pb-md-16">
-    <h1 class="text-primary fz-7 text-center mb-6 mb-lg-8">課程介紹</h1>
+    <h1 
+      class="text-primary fz-7 text-center mb-6 mb-lg-8"
+      data-aos="fade-up"
+      data-aos-duration="700"
+      data-aos-easing="ease"
+    >
+      課程介紹
+    </h1>
     <div class="row">
       <div class="col-md-6 offset-lg-1">
-        <div class="position-relative overflow-hidden ratio ratio-35x22 h-md-100">
+        <div 
+          class="position-relative overflow-hidden ratio ratio-35x22 h-md-100"
+          data-aos="zoom-in-right"
+          data-aos-duration="700"
+          data-aos-easing="ease"
+        >
           <img class="position-absolute top-50 start-50 translate-middle object-fit-cover_2 rounded-16"
             src="https://github.com/hexschool/webLayoutTraining1st/blob/master/yoga-week8/photo-1540206276207-3af25c08abc4.jpeg?raw=true"
             alt="個人訓練">
         </div>
       </div>
       <div class="col-md-6 col-lg-5 text-primary pt-2 pt-md-0">
-        <h3 class="mb-1">本月限定課程 - 空中瑜珈</h3>
+        <h3 
+          class="mb-1"
+          data-aos="fade-left"
+          data-aos-duration="1200"
+          data-aos-easing="ease-in-out-back"
+        >
+          本月限定課程 - 空中瑜珈
+        </h3>
         <div class="d-flex mb-4">
-          <p class="text-secondary me-2">授課老師：Carol Tang</p>
-          <span class="badge rounded-pill bg-primary py-2 px-4">60 min</span>
+          <p 
+            class="text-secondary me-2"
+            data-aos="zoom-in"
+            data-aos-duration="1200"
+            data-aos-easing="ease-in-out-back"
+            data-aos-delay="1000"
+          >
+            授課老師：Carol Tang
+          </p>
+          <span 
+            class="badge rounded-pill bg-primary py-2 px-4"
+            data-aos="zoom-in"
+            data-aos-duration="1200"
+            data-aos-easing="ease-in-out-back"
+            data-aos-delay="1000"
+          >
+            60 min
+          </span>
           <!--標籤-->
         </div>
-        <p class="mb-4">
+        <p 
+          class="mb-4"
+          data-aos="fade-left"
+          data-aos-duration="1200"
+          data-aos-easing="ease-in-out-back"
+          data-aos-delay="1500"
+        >
           使用掛布懸掛在半空，進行哈達瑜珈體位法練習<br>
           藉由地心引力的重力原理<br>
           鍛鍊核心肌群，舒緩脊椎壓力<br>
@@ -161,13 +204,34 @@
         <div class="row mb-md-7-half">
           <!--1-->
           <div class="col-12 col-md-6 col-lg-7">
-            <div class="card bg-dark text-white mb-7-half mb-md-0 border-0">
+            <div 
+              class="card bg-dark text-white mb-7-half mb-md-0 border-0"
+              data-aos="zoom-in-right"
+              ata-aos-duration="1200"
+              data-aos-easing="ease-in-out-back"
+            >
               <img
                 src="https://github.com/hexschool/webLayoutTraining1st/blob/master/yoga-week8/woman%20doing%20yoga%20beside%20wall.jpg?raw=true"
                 class="card-img h-x1.96 object-fit-cover_2" alt="試範照片">
               <div class="card-img-overlay d-flex flex-column justify-content-end">
-                <h3 class="card-title">基礎 Basic</h3>
-                <p class="card-text">授課老師：Carol Tang</p>
+                <h3 
+                  class="card-title"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-easing="ease"
+                  data-aos-delay="400"
+                >
+                  基礎 Basic
+                </h3>
+                <p 
+                  class="card-text"
+                  data-aos="fade-up"
+                  data-aos-duration="1300"
+                  data-aos-easing="ease"
+                  data-aos-delay="400"
+                >
+                  授課老師：Carol Tang
+                </p>
                 <span
                   class="badge rounded-pill bg-secondary py-2 px-4 position-absolute top-0 start-20 translate-middle">60
                   min</span>
@@ -176,13 +240,34 @@
           </div>
           <!--2-->
           <div class="col-12 col-md-6 col-lg-5">
-            <div class="card bg-dark text-white mb-7-half mb-md-0 border-0">
+            <div 
+              class="card bg-dark text-white mb-7-half mb-md-0 border-0"
+              data-aos="zoom-in-left"
+              data-aos-duration="1200"
+              data-aos-easing="ease-in-out-back"
+            >
               <img
                 src="https://github.com/hexschool/webLayoutTraining1st/blob/master/yoga-week8/rawan-yasser-zQ1ypq-WHzQ-unsplash.jpg?raw=true"
                 class="card-img h-x1.96 object-fit-cover_2" alt="試範照片">
               <div class="card-img-overlay d-flex flex-column justify-content-end">
-                <h3 class="card-title">艾揚格 Iyengar</h3>
-                <p class="card-text">授課老師：Kanae</p>
+                <h3 
+                  class="card-title"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-easing="ease"
+                  data-aos-delay="400"
+                >
+                  艾揚格 Iyengar
+                </h3>
+                <p 
+                  class="card-text"
+                  data-aos="fade-up"
+                  data-aos-duration="1300"
+                  data-aos-easing="ease"
+                  data-aos-delay="400"
+                >
+                  授課老師：Kanae
+                </p>
                 <span
                   class="badge rounded-pill bg-secondary py-2 px-4 position-absolute top-0 start-20 translate-middle">60
                   min</span>
@@ -194,13 +279,34 @@
         <div class="row flex-row-reverse mb-7-half">
           <!--1-->
           <div class="col-12 col-md-6 col-lg-7">
-            <div class="card bg-dark text-white  mb-7-half mb-md-0 border-0">
+            <div 
+              class="card bg-dark text-white  mb-7-half mb-md-0 border-0"
+              data-aos="zoom-in-left"
+              data-aos-duration="1200"
+              data-aos-easing="ease-in-out-back"
+            >
               <img
                 src="https://github.com/hexschool/webLayoutTraining1st/blob/master/yoga-week8/woman%20in%20white%20tank%20top%20and%20white%20leggings%20bending%20her%20body.jpg?raw=true"
                 class="card-img h-x1.96 object-fit-cover_2" alt="試範照片">
               <div class="card-img-overlay d-flex flex-column justify-content-end">
-                <h3 class="card-title">基礎 Basic</h3>
-                <p class="card-text">授課老師：Carol Tang</p>
+                <h3 
+                  class="card-title"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-easing="ease"
+                  data-aos-delay="400"
+                >
+                  寰宇 Universal
+                </h3>
+                <p 
+                  class="card-text"
+                  data-aos="fade-up"
+                  data-aos-duration="1300"
+                  data-aos-easing="ease"
+                  data-aos-delay="400"
+                  >
+                    授課老師：Kanae
+                  </p>
                 <span
                   class="badge rounded-pill bg-secondary py-2 px-4 position-absolute top-0 start-20 translate-middle">60
                   min</span>
@@ -209,13 +315,34 @@
           </div>
           <!--2-->
           <div class="col-12 col-md-6 col-lg-5">
-            <div class="card bg-dark text-white border-0">
+            <div 
+              class="card bg-dark text-white border-0"
+              data-aos="zoom-in-right"
+              data-aos-duration="1200"
+              data-aos-easing="ease-in-out-back"
+            >
               <img
                 src="https://github.com/hexschool/webLayoutTraining1st/blob/master/yoga-week8/woman%20in%20black%20sports%20bra%20and%20black%20leggings%20doing%20yoga.jpg?raw=true"
                 class="card-img h-x1.96 object-fit-cover_2" alt="試範照片">
               <div class="card-img-overlay d-flex flex-column justify-content-end">
-                <h3 class="card-title">寰宇 Universal</h3>
-                <p class="card-text">授課老師：Kanae</p>
+                <h3 
+                  class="card-title"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-easing="ease"
+                  data-aos-delay="400"
+                >
+                  哈達 Hatha
+                </h3>
+                <p 
+                  class="card-text"
+                  data-aos="fade-up"
+                  data-aos-duration="1300"
+                  data-aos-easing="ease"
+                  data-aos-delay="400"
+                >
+                  授課老師：Kuzuha
+                </p>
                 <span
                   class="badge rounded-pill bg-secondary py-2 px-4 position-absolute top-0 start-20 translate-middle">60
                   min</span>
@@ -227,13 +354,34 @@
         <div class="row mb-md-7-half">
           <!--1-->
           <div class="col-12 col-md-6 col-lg-7">
-            <div class="card bg-dark text-white mb-7-half mb-md-0 border-0">
+            <div 
+              class="card bg-dark text-white mb-7-half mb-md-0 border-0"
+              data-aos="zoom-in-right"
+              data-aos-duration="1200"
+              data-aos-easing="ease-in-out-back"
+            >
               <img
                 src="https://github.com/hexschool/webLayoutTraining1st/blob/master/yoga-week8/two%20woman%20dong%20fitness%20exercise.jpg?raw=true"
                 class="card-img h-x1.96 object-fit-cover_2" alt="試範照片">
               <div class="card-img-overlay d-flex flex-column justify-content-end">
-                <h3 class="card-title">雙人飛行 Arco Yoga</h3>
-                <p class="card-text">授課老師：Kanae</p>
+                <h3 
+                  class="card-title"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-easing="ease"
+                  data-aos-delay="400"
+                >
+                  雙人飛行 Arco Yoga
+                </h3>
+                <p 
+                  class="card-text"
+                  data-aos="fade-up"
+                  data-aos-duration="1300"
+                  data-aos-easing="ease"
+                  data-aos-delay="400"
+                >
+                  授課老師：Kanae
+                </p>
                 <span
                   class="badge rounded-pill bg-secondary py-2 px-4 position-absolute top-0 start-20 translate-middle">60
                   min</span>
@@ -242,13 +390,34 @@
           </div>
           <!--2-->
           <div class="col-12 col-md-6 col-lg-5">
-            <div class="card bg-dark text-white mb-7-half mb-md-0 border-0">
+            <div 
+              class="card bg-dark text-white mb-7-half mb-md-0 border-0"
+              data-aos="zoom-in-left"
+              data-aos-duration="1200"
+              data-aos-easing="ease-in-out-back"
+            >
               <img
                 src="https://github.com/hexschool/webLayoutTraining1st/blob/master/yoga-week8/woman%20doing%20yoga.jpg?raw=true"
                 class="card-img h-x1.96 object-fit-cover_2" alt="試範照片">
               <div class="card-img-overlay d-flex flex-column justify-content-end">
-                <h3 class="card-title">阿斯坦加 Ashtanga</h3>
-                <p class="card-text">授課老師：Kanae</p>
+                <h3 
+                  class="card-title"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-easing="ease"
+                  data-aos-delay="400"
+                >
+                  阿斯坦加 Ashtanga
+                </h3>
+                <p 
+                  class="card-text"
+                  data-aos="fade-up"
+                  data-aos-duration="1300"
+                  data-aos-easing="ease"
+                  data-aos-delay="400"
+                >
+                  授課老師：Kanae
+                </p>
                 <span
                   class="badge rounded-pill bg-secondary py-2 px-4 position-absolute top-0 start-20 translate-middle">60
                   min</span>
@@ -260,13 +429,34 @@
         <div class="row flex-row-reverse mb-8 mb-md-10 mb-lg-16">
           <!--1-->
           <div class="col-12 col-md-6 col-lg-7">
-            <div class="card bg-dark text-white mb-7-half mb-md-0 border-0">
+            <div 
+              class="card bg-dark text-white mb-7-half mb-md-0 border-0"
+              data-aos="zoom-in-right"
+              data-aos-duration="1200"
+              data-aos-easing="ease-in-out-back"
+            >
               <img
                 src="https://github.com/hexschool/webLayoutTraining1st/blob/master/yoga-week8/woman%20in%20white%20tank%20top%20and%20white%20pants%20bending%20her%20body%20by%20the%20window.jpg?raw=true"
                 class="card-img h-x1.96 object-fit-cover_3" alt="試範照片">
               <div class="card-img-overlay d-flex flex-column justify-content-end">
-                <h3 class="card-title">基礎 Basic</h3>
-                <p class="card-text">授課老師：Carol Tang</p>
+                <h3 
+                  class="card-title"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-easing="ease"
+                  data-aos-delay="400"
+                >
+                  陰陽 Yin Yang
+                </h3>
+                <p 
+                  class="card-text"
+                  data-aos="fade-up"
+                  data-aos-duration="1300"
+                  data-aos-easing="ease"
+                  data-aos-delay="400"
+                >
+                  授課老師：Asa Chen
+                </p>
                 <span
                   class="badge rounded-pill bg-secondary py-2 px-4 position-absolute top-0 start-20 translate-middle">60
                   min</span>
@@ -275,13 +465,34 @@
           </div>
           <!--2-->
           <div class="col-12 col-md-6 col-lg-5">
-            <div class="card bg-dark text-white border-0">
+            <div 
+              class="card bg-dark text-white border-0"
+              data-aos="zoom-in-left"
+              data-aos-duration="1200"
+              data-aos-easing="ease-in-out-back"
+            >
               <img
                 src="https://github.com/hexschool/webLayoutTraining1st/blob/master/yoga-week8/carl-barcelo-nqUHQkuVj3c-unsplash.jpg?raw=true"
                 class="card-img h-x1.96 object-fit-cover_2" alt="試範照片">
               <div class="card-img-overlay d-flex flex-column justify-content-end">
-                <h3 class="card-title">寰宇 Universal</h3>
-                <p class="card-text">授課老師：Kanae</p>
+                <h3 
+                  class="card-title"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-easing="ease"
+                  data-aos-delay="400"
+                >
+                  寰宇 Universal
+                </h3>
+                <p 
+                  class="card-text"
+                  data-aos="fade-up"
+                  data-aos-duration="1300"
+                  data-aos-easing="ease"
+                  data-aos-delay="400"
+                >
+                  授課老師：Kanae
+                </p>
                 <span
                   class="badge rounded-pill bg-secondary py-2 px-4 position-absolute top-0 start-20 translate-middle">60
                   min</span>
@@ -310,13 +521,27 @@
 <!--師資介紹-->
 <section class="pt-8 pt-lg-10">
   <div class="container">
-    <h3 class="text-primary text-center mb-16">師資介紹</h3>
+    <h3 
+      class="text-primary text-center mb-16"
+      data-aos="fade-up"
+      data-aos-duration="800"
+      data-aos-easing="ease-out"
+      data-aos-delay="50"
+    >
+      師資介紹
+    </h3>
     <div class="swiper js-swiper-teachers overflow-visible">
       <ul class="swiper-wrapper mb-md-20 mb-lg-28">
         <!--1-->
         <li class="swiper-slide h-auto mb-18 mb-md-0">
           <div class="card bg-secondary text-white h-100">
-            <div class="card-body position-relative">
+            <div 
+              class="card-body position-relative"
+              data-aos="zoom-out-up"
+              data-aos-duration="900"
+              data-aos-easing="ease"
+              data-aos-delay="500"
+            >
               <img
                 class="w-x0.96 h-x0.96 object-fit-cover_2 position-absolute top-0 start-50 translate-middle rounded-circle border border-4 border-primary"
                 src="https://github.com/hexschool/webLayoutTraining1st/blob/master/yoga-week8/teacher-1.png?raw=true"
@@ -338,7 +563,13 @@
         <!--2-->
         <li class="swiper-slide h-auto mb-18 mb-md-0">
           <div class="card bg-primary text-white h-100">
-            <div class="card-body position-relative position-relative">
+            <div 
+              class="card-body position-relative position-relative"
+              data-aos="zoom-out-up"
+              data-aos-duration="900"
+              data-aos-easing="ease"
+              data-aos-delay="500"
+            >
               <img
                 class="w-x0.96 h-x0.96 object-fit-cover_2 position-absolute top-0 start-50 translate-middle rounded-circle border border-4 border-secondary"
                 src="https://github.com/hexschool/webLayoutTraining1st/blob/master/yoga-week8/teacher-2.png?raw=true"
@@ -361,7 +592,13 @@
         <!--3-->
         <li class="swiper-slide h-auto mb-18 mb-md-0">
           <div class="card bg-secondary text-white h-100">
-            <div class="card-body position-relative">
+            <div 
+              class="card-body position-relative"
+              data-aos="zoom-out-up"
+              data-aos-duration="900"
+              data-aos-easing="ease"
+              data-aos-delay="500"
+            >
               <img
                 class="w-x0.96 h-x0.96 object-fit-cover_2 position-absolute top-0 start-50 translate-middle rounded-circle border border-4 border-primary"
                 src="https://github.com/hexschool/webLayoutTraining1st/blob/master/yoga-week8/teacher-4.png?raw=true"
@@ -382,7 +619,13 @@
         <!--4-->
         <li class="swiper-slide h-auto mb-18 mb-md-0">
           <div class="card bg-primary text-white h-100">
-            <div class="card-body position-relative">
+            <div 
+              class="card-body position-relative"
+              data-aos="zoom-out-up"
+              data-aos-duration="900"
+              data-aos-easing="ease"
+              data-aos-delay="500"
+            >
               <img
                 class="w-x0.96 h-x0.96 object-fit-cover_2 position-absolute top-0 start-50 translate-middle rounded-circle border border-4 border-secondary"
                 src="https://github.com/hexschool/webLayoutTraining1st/blob/master/yoga-week8/teacher-3.png?raw=true"
@@ -497,6 +740,13 @@
   </div>
 </footer>
 
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      offset: 100,
+      once: true,
+    });
+  </script>
   <!--日期外掛-->
   <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/js/datepicker-full.min.js"></script>
   <!--swiper @7 js-->
